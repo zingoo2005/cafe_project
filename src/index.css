@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme {
+  --color-coffee-50: #fcf7f2;
+  --color-coffee-100: #f3e6d9;
+  --color-coffee-300: #d8aa7f;
+  --color-coffee-500: #a6673f;
+  --color-coffee-700: #6b4937;
+  --color-coffee-900: #493024;
+  --font-sans: "Segoe UI", ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--color-coffee-50);
+  color: var(--color-coffee-900);
+}
+
+button,
+input,
+select {
+  font: inherit;
+}s
