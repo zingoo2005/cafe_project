@@ -293,57 +293,7 @@ export default function Home({ favourites = [], onToggleFavourite }) {
         )}
       </main>
 
-      {/* Latest Community Posts */}
-      {cafes.length > 0 && <section className="mx-auto w-[min(1180px,92%)] pb-16">
-
-        <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-
-          <div>
-            <p className="text-xs font-extrabold tracking-[0.18em] text-coffee-500 uppercase">
-              From our community
-            </p>
-
-            <h2 className="mt-2 text-3xl font-black text-coffee-900">
-              Latest Community Posts
-            </h2>
-          </div>
-
-          <Link
-            to="/community"
-            className="rounded-xl bg-coffee-700 px-5 py-3 text-center text-sm font-bold text-white hover:bg-coffee-900"
-          >
-            View All Posts
-          </Link>
-
-        </div>
-
-        {/* Empty Community Posts */}
-        {communityPosts.length === 0 ? (
-          <div className="rounded-2xl border border-dashed border-coffee-200 bg-white p-8 text-center text-stone-500">
-            No community posts yet. Be the first to share!
-
-            <div>
-              <Link
-                to="/community/create"
-                className="mt-4 inline-block font-bold text-coffee-700 underline"
-              >
-                Create a Post
-              </Link>
-            </div>
-          </div>
-        ) : (
-
-          /* Community Post Cards */
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-
-            {communityPosts.slice(0, 3).map((post) => (
-              <CommunityPostCard key={post.id} post={post} />
-            ))}
-
-          </div>
-        )}
-
-      </section>}
+      
     </>
   )
 }
