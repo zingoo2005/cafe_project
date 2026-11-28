@@ -1,4 +1,3 @@
-
 const API_URL = (import.meta.env.VITE_API_URL || '/api').replace(/\/+$/, '')
 const V1_API_URL = `${API_URL}/v1`
 const API_ORIGIN = API_URL.replace(/\/api\/?$/, '')
@@ -133,6 +132,12 @@ export const getMapCafes = (page = 1, perPage = 30) => {
 
 export const getCafe = (id) =>
   v1Request(`/cafes/${id}`)
+
+// COMMUNITY BAD REVIEWS
+// Admin-kept reports for a specific cafe
+
+export const getCafeBadReviews = (id) =>
+  apiRequest(`/cafes/${id}/bad-reviews`)
 
 export const getCafeReviewTargets = (name) => {
   const params = new URLSearchParams({ name })
